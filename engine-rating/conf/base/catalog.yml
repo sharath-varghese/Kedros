@@ -1,0 +1,173 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+#
+raw_data:
+  type: pandas.ExcelDataSet
+  filepath: data/01_raw/dataset.xlsx
+
+clean_data:
+  type: MemoryDataSet
+
+target_plot:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/02_intermediate/target.png
+
+fig1:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/02_intermediate/fig1.png
+
+fig2:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/02_intermediate/fig2.png
+
+fig3:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/02_intermediate/fig3.png
+
+fig4:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/02_intermediate/fig4.png
+
+fig5:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/02_intermediate/fig5.png
+
+fig6:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/02_intermediate/fig6.png
+
+fig7:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/02_intermediate/fig7.png
+
+fig8:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/02_intermediate/fig8.png
+
+fig9:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/02_intermediate/fig9.png
+
+data_after_eda:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/data_afterEDA.csv
+
+fig10:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/02_intermediate/fig10.png
+
+fig11:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/02_intermediate/fig11.png
+
+X_tr:
+  type: pickle.PickleDataSet
+  filepath: data/04_feature/X_train.pkl
+  backend: pickle
+
+X_cr:
+  type: pickle.PickleDataSet
+  filepath: data/04_feature/X_cv.pkl
+  backend: pickle
+
+X_te:
+  type: pickle.PickleDataSet
+  filepath: data/04_feature/X_test.pkl
+  backend: pickle
+
+y_train:
+  type: pickle.PickleDataSet
+  filepath: data/04_feature/y_train.pkl
+  backend: pickle
+
+y_cv:
+  type: pickle.PickleDataSet
+  filepath: data/04_feature/y_cv.pkl
+  backend: pickle
+
+y_test:
+  type: pickle.PickleDataSet
+  filepath: data/04_feature/y_test.pkl
+  backend: pickle
+
+plot_knn:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/KNN/parameter_tuning.png
+
+confusion_knn:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/KNN/confusion_matrix.png  
+
+precision_knn:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/KNN/precision_matrix.png   
+
+recall_knn:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/KNN/recall_matrix.png    
+
+model_knn:
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/KNN/model_knn.pkl
+  backend: pickle
+
+plot_lr:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/Logistic_Regression/parameter_tuning.png
+
+confusion_lr:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/Logistic_Regression/confusion_matrix.png  
+
+precision_lr:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/Logistic_Regression/precision_matrix.png   
+
+recall_lr:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/Logistic_Regression/recall_matrix.png  
+
+model_lr:
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/Logistic_Regression/model_lr.pkl
+  backend: pickle
+
+plot_svm:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/SVM/parameter_tuning.png
+
+confusion_svm:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/SVM/confusion_matrix.png  
+
+precision_svm:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/SVM/precision_matrix.png   
+
+recall_svm:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/SVM/recall_matrix.png  
+
+model_svm:
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/SVM/model_knn.pkl
+  backend: pickle
+
+confusion_rf:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/Random_Forest/confusion_matrix.png  
+
+precision_rf:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/Random_Forest/precision_matrix.png   
+
+recall_rf:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_model_output/Random_Forest/recall_matrix.png  
+
+model_rf:
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/Random_Forest/model_rf.pkl
+  backend: pickle
